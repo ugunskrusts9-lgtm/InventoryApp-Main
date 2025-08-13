@@ -1,0 +1,114 @@
+/* Reset some default styles */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f6fa;
+}
+
+/* Container for centering the card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Card styling */
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #4b7bec;
+}
+
+/* Titles */
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-bottom: 1.5rem;
+}
+
+/* Inputs */
+.input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #dfe6e9;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input:focus {
+    border-color: #4b7bec;
+    box-shadow: 0 0 0 2px rgba(75, 123, 236, 0.2);
+}
+
+/* Row buttons */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.link {
+    background: none;
+    border: none;
+    color: #0984e3;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Primary button */
+.buttonPrimary {
+    width: 100%;
+    background-color: #4b7bec;
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttonPrimary:hover {
+    background-color: #3867d6;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem;
+    }
+    .logo {
+        font-size: 2.5rem;
+    }
+    .title {
+        font-size: 1.25rem;
+    }
+}
