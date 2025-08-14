@@ -6,7 +6,8 @@ import LoginScreen from "./screens/LoginScreen";
 import InventoryScreen from "./screens/InventoryScreen";
 
 const Stack = createNativeStackNavigator();
-import QRScannerScreen from "screens/QRScannerScreen";
+import QRScannerScreen from "./screens/QRScannerScreen";
+
 
 <Stack.Screen name="QRScanner" component={QRScannerScreen} />
 

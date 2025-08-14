@@ -1,14 +1,23 @@
-// Add import
-import { Button, FlatList, TextInput, View, Text, StyleSheet } from "react-native";
+// screens/InventoryScreen.tsx
+import React from "react";
+import {StyleSheet, Text, View} from "react-native";
+import {NativeStackScreenProps} from "@react-navigation/native-stack";
+import type {RootStackParamList} from "@/screens/RootStackParamList";
 
-// inside InventoryScreen component
-const goToQRScanner = () => {
-    navigation.navigate("QRScanner", { addItem: (itemName) => setItems([...items, { id: Date.now().toString(), name: itemName }]) });
-};
+// 2. Type the props
+type Props = NativeStackScreenProps<RootStackParamList, "Inventory">;
 
-// Replace Add Item button with two buttons
-<View style={{ flexDirection: "row", marginBottom: 10 }}>
-    <Button title="Add Item" onPress={addItem} />
-    <View style={{ width: 10 }} />
-    <Button title="Scan QR" onPress={goToQRScanner} />
-</View>
+export default function InventoryScreen({ route }: Props) {
+    const { user } = route.params;
+
+    return (
+        <View style={styles.container}>
+            <Text style={styles.text}>Welcome to Inventory, {user}!</Text>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: { flex: 1, justifyContent: "center", alignItems: "center" },
+    text: { fontSize: 20 },
+});
